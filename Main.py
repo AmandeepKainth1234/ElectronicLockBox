@@ -2,7 +2,6 @@
 """
 Main script for the Electronic Lock Box system. Developed by Amandeep Kainth of the James Watt School of Engineering, University of Glasgow.
 Developed for a Final Year MEng Degree Project. 
-Licensed under a MIT License, MIT_LICENSE_MAIN, which can be found in the main repository.
 """ 
 
 #! /usr/bin/python3.9
