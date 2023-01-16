@@ -55,10 +55,10 @@ GPIO.setup(11, GPIO.IN,pull_up_down=GPIO.PUD_UP)
 GPIO.setup(10, GPIO.OUT, initial=GPIO.LOW)  
 GPIO.setup(1, GPIO.OUT, initial=GPIO.LOW
 
-with open('data.p', 'rb') as fp: #open data file holding the users/codes database 
+with open('user_codes.p', 'rb') as fp: #open data file holding the users/codes database 
         user_codes = pickle.load(fp) #assign this to user_codes dictionary
         
-with open('data1.p', 'rb') as fp: #open data file holding the users/fingerprints database 
+with open('user_fingerprints.p', 'rb') as fp: #open data file holding the users/fingerprints database 
          user_fingerprints = pickle.load(fp) #assign this to user_fingerprints dictionary
                 
 try: #exception error handling if GPS module not connected or has an error. Allows system to still operate
