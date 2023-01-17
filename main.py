@@ -61,7 +61,7 @@ GPIO.setup(22, GPIO.IN,pull_up_down=GPIO.PUD_UP)
 GPIO.setup(18, GPIO.OUT, initial=GPIO.LOW)
 GPIO.setup(11, GPIO.IN,pull_up_down=GPIO.PUD_UP) 
 GPIO.setup(10, GPIO.OUT, initial=GPIO.LOW)  
-GPIO.setup(1, GPIO.OUT, initial=GPIO.LOW
+GPIO.setup(1, GPIO.OUT, initial=GPIO.LOW)
 
 #Open data file holding the users/codes database, assign to variable
 with open('data.p', 'rb') as fp: 
@@ -225,7 +225,7 @@ def keypad(): #Gets user code input from matrix keypad
             print(code_input)
             return code_input 
           
-def tracking(unlock_type, user_s1, user_s2): n
+def tracking(unlock_type, user_s1, user_s2): 
   #Handles GPS location extraction and calls the logging functio
   
   y=0  #Set location found variable to 0
