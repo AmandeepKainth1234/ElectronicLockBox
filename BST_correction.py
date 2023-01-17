@@ -1,3 +1,4 @@
+#os is used to run terminal commands 
 import os
 import datetime
 
@@ -5,9 +6,7 @@ import datetime
 e = datetime.datetime.now()
 
 import subprocess
-from datetime import datetime
 import pickle
-import sys
 import calendar
 
 
