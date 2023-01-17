@@ -1,5 +1,11 @@
 #! /usr/bin/python3.9
 
+#Door monitor script for the Electronic Lock Box system. Developed by Amandeep Kainth of the James Watt School of Engineering, University of Glasgow.
+#Developed for a Final Year MEng Degree Project. 
+
+#  Use Policy: The code provided here, apart from the segments indicated within the respective files /
+#  is wholly the author's work. It may not be used or shared for any purpose other than viewing /
+#  unless explicit permission has been given to you
 #Import adapted SMS functionality code 
 from SMS import send_sms
 
