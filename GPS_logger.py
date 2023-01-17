@@ -1,48 +1,56 @@
 
+#GPS drivers (https://gpsd.gitlab.io/gpsd/client-howto.html)
 from gps import *
-import time, inspect
- 
-from csv import writer
 
+import time, inspect
+from csv import writer
 from datetime import datetime
-from datetime import date    
+from datetime import date   
+
+#Begin GPS datasteam from GPSD driver (https://gpsd.gitlab.io/gpsd/client-howto.html)
 gpsd = gps(mode=WATCH_ENABLE|WATCH_NEWSTYLE)
 
 
-def tracking():
+def logging():
 
- 
-  while True: #y!=1 and z!=5:#repeat until get first non zero result, otherwise attempt to get non zero result 5 times.
+  #Logging function
+  
+  while True: 
     report = gpsd.next() #get report of gps data from gpsd daemon
     lat = str(getattr(report,'lat',0.0))#get lat
-    if lat !="0.0": #ignore results with 0 lat (which means all is 0)
+    if lat !="0.0": 
+        #Proceed only upon a non zero latitude. Zero latitude indicates no GPS location 
+        #Can occur periodically in stream as well as when no signal.
         
-        
+        #Get latitude & longnitude from the lat attribute of the GPS report object
         lat = str(getattr(report,'lat',0.0))
         lon = str(getattr(report,'lon',0.0))
+        #Compile a Google Maps link 
         locationlink= f"https://www.google.co.uk/maps/place/{lat},{lon}"
         
-    
+        
         current_date = date.today()
         now = datetime.now()
         current_time = now.strftime("%H:%M:%S")
+        #Compile packet for being written to log
         List = [current_date, current_time, locationlink]
-        with open('GPSlogger.csv', 'a') as f_object:
+        #Open GPS Log CSV file for appending to
+        with open('GPSlogger.csv', 'a') as file:
      
-        
-          writer_object = writer(f_object)
+          # Create writer method for opened file   
+          writer_object = writer(file)
      
-      
+          # Write new row with packet created above
           writer_object.writerow(List)
      
-          f_object.close()  
+          file.close()  
           
           time.sleep(20)
           
-   
+
           
   
-tracking()  
+logging()  
     
  
 
