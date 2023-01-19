@@ -107,7 +107,7 @@ pickle.dump(count, open("count.dat", "wb"))  #Save this to file
 #*    Date: 15/01/2018
 #*    Code version: 1.0
 #*    Availability: GitHub: https://github.com/yuskegoto/python_huawei_e303
-#*    Usage: Lines 98-129
+#*    Usage: Lines 115-144
 #*****************************************************************************
 
 #SMS functionality below
@@ -153,7 +153,7 @@ def send_sms(phone_no, sms_text):
 #*    Date: 04/10/2022
 #*    Code version: 2.2.10
 #*    Availability: GitHub: https://github.com/adafruit/Adafruit_CircuitPython_Fingerprint
-#*    Usage: Lines 145-158, 373-378
+#*    Usage: Lines 166-174, 403-413
 #*    License: MIT License. See file MIT_LICENSE_ADAFRUIT within the main repository.
 #***************************************************************************************
 
