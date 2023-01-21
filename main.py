@@ -20,7 +20,7 @@ import time
 from time import sleep
 import serial
 
-# Fingerprint drivers (See line 141 for source)
+# Fingerprint drivers (See line 150 for source)
 import adafruit_fingerprint
 
 # OTP module (https://github.com/pyauth/pyotp)
