@@ -446,14 +446,14 @@ def fingerprint_input():
                     print(finger_database) #Print users/fingerprints database
                     
                     #Get the name of the stage one fingerprint user, via users/fingerprints database
-                    user_s1=(finger_database.get(finger_ID))
+                    user_s1=(user_fingerprints.get(finger_ID))
                     print(user_s1)
                     
                     #Get the fingerprint ID of the current (stage two) fingerprint user
                     finger_ID =finger.finger_id 
                     
                     #Get the name of the current (stage two) fingerprint user, via users/fingerprints database
-                    user_s2=(finger_database.get(finger_ID))
+                    user_s2=(user_fingerprints.get(finger_ID))
                     print(user_s2)
                     
                     unlock(unlock_type, user_s1, user_s2) #Call the unlock function
